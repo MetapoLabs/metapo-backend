@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "16ab0eb3-21a3-45da-adb3-44dbdffd5693",
+		"name": "bbs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "质押",
+			"item": [
+				{
+					"name": "添加质押",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_eth_address\" : \"232131\",\n    \"staking\": 10,\n    \"postID\": \"621c0b0d02c4bb0dd2874ca6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/staking/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"staking",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "移除质押",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/staking/remove?id=621dd89c604a6481f23cce58&user_eth_address=123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"staking",
+								"remove"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "621dd89c604a6481f23cce58"
+								},
+								{
+									"key": "user_eth_address",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取质押列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/staking/list?page=1&pageSize=10&user_eth_address=232131",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"staking",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "user_eth_address",
+									"value": "232131"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "帖子",
+			"item": [
+				{
+					"name": "帖子列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/post/list?page=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "帖子列表(通过eth地址)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/post/getListByEthAddress/testeAddress3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+								"getListByEthAddress",
+								"testeAddress3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "新增帖子",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_eth_address\": \"dsfdsfa2222\",\n    \"desc\":\"12344\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/post/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "登录",
+			"item": [
+				{
+					"name": "获取登录nonce接口",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_eth_address\": \"dsfdsfa2222\",\n    \"desc\":\"12344\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "验证nonce",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_eth_address\": \"0xDc8d17C9A2d848F7a59BFcFf90A3869Fb491f697\",\n    \"signMessage\":\"0xce10fbd2d52c3f33c84b0ed648a43c4e393152b121f7cd77969bee42b7620d0a59677a06a07867001f2fa14e1a7b65d3adaac338e560bdc343243bc5c62dd6861c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login/auth",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "设置",
+			"item": [
+				{
+					"name": "用户设置",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_eth_address\": \"dsfdsfa2222\",\n    \"name\": \"jack2\",\n    \"background\": \"213123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/setting/save",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"setting",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取用户设置",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_eth_address\": \"dsfdsfa2222\",\n    \"name\": \"jack2\",\n    \"background\": \"213123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/setting/get?user_eth_address=123",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"setting",
+								"get"
+							],
+							"query": [
+								{
+									"key": "user_eth_address",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

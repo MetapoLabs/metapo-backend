@@ -1,0 +1,41 @@
+{
+    "eth" : {
+        "Provider" : "https://mainnet.infura.io/v3/1d2d5a2c663e48ecb990c99187ec15de",
+        "USDT" : "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        "USDT_Decimals": 6,
+        "USDT_Unit": "mwei",
+        "USDC" : "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        "USDC_Decimals": 6,
+        "USDC_Unit": "mwei",
+        "DAI" : "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        "DAI_Decimals": 18,
+        "DAI_Unit": "ether",
+        "ABI": [{"constant":true,"inputs":[{"name":"who","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]
+    },
+    "polygon" : {
+        "Provider" : "https://rpc-mainnet.maticvigil.com",
+        "USDT" : "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+        "USDT_Decimals": 6,
+        "USDT_Unit": "mwei",
+        "USDC" : "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "USDC_Decimals": 6,
+        "USDC_Unit": "mwei",
+        "DAI" : "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
+        "DAI_Decimals": 18,
+        "DAI_Unit": "ether",
+        "ABI": [{"constant":true,"inputs":[{"name":"who","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]
+    },
+    "bsc" : {
+        "Provider" : "https://bsc-dataseed1.defibit.io/",
+        "USDT" : "0x55d398326f99059ff775485246999027b3197955",
+        "USDT_Decimals": 18,
+        "USDT_Unit": "ether",
+        "USDC" : "0x0a385f86059e0b2a048171d78afd1f38558121f3",
+        "USDC_Decimals": 6,
+        "USDC_Unit": "mwei",
+        "DAI" : "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "DAI_Decimals": 18,
+        "DAI_Unit": "ether",
+        "ABI": [{"constant":true,"inputs":[{"name":"who","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]
+    }
+}
